@@ -1,0 +1,25 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 540px;
+  margin: 4rem auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.bio {
+  text-align: center;
+  color: #aab4be;
+  margin-top: 16px;
+  margin-bottom: 32px;
+  line-height: 1.5rem;
+}

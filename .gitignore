@@ -37,3 +37,6 @@ yarn-error.log*
 # hardhat files
 cache
 artifacts
+
+# typechain files
+typechain

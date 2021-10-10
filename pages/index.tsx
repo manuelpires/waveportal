@@ -1,16 +1,11 @@
-import Head from "next/head";
+import Layout from "../components/Layout";
 
-export default function Home() {
-  return (
-    <div>
-      <Head>
-        <title>Wave Portal | Manuel Pires</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+const Home = () => (
+  <Layout title="Wave Portal | Manuel Pires">
+    <main>
+      <h1>Welcome to Wave Portal!</h1>
+    </main>
+  </Layout>
+);
 
-      <main>
-        <h1>Welcome to Wave Portal!</h1>
-      </main>
-    </div>
-  );
-}
+export default Home;

@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ethersproject/providers": "^5.4.5",
+    "@web3-react/core": "^6.1.9",
     "next": "11.1.2",
     "react": "17.0.2",
     "react-dom": "17.0.2"

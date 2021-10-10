@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "hardhat compile"
   },
   "dependencies": {
     "@ethersproject/providers": "^5.4.5",

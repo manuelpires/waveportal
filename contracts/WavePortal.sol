@@ -8,7 +8,7 @@ contract WavePortal {
     event NewWave(address indexed from, string message, uint256 timestamp);
 
     struct Wave {
-        address waver;
+        address from;
         string message;
         uint256 timestamp;
     }

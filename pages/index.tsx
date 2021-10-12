@@ -1,5 +1,6 @@
 import { useWeb3React } from "@web3-react/core";
 import Layout from "../components/Layout";
+import WaveForm from "../components/WaveForm";
 import Web3Connect from "../components/Web3Connect";
 import useEagerConnect from "../hooks/useEagerConnect";
 import styles from "../styles/Home.module.css";
@@ -20,7 +21,9 @@ const Home = () => {
           Ethereum wallet on the Rinkeby testnet and wave at me!
         </p>
 
-        {isConnected ? null : (
+        {isConnected ? (
+          <WaveForm />
+        ) : (
           <Web3Connect triedToEagerConnect={triedToEagerConnect} />
         )}
       </main>

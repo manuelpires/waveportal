@@ -1,0 +1,32 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  background: #191b1f;
+  padding: 8px;
+  border-radius: 24px;
+  box-shadow: rgb(0 0 0 / 1%) 0px 0px 1px, rgb(0 0 0 / 4%) 0px 4px 8px,
+    rgb(0 0 0 / 4%) 0px 16px 24px, rgb(0 0 0 / 1%) 0px 24px 32px;
+}
+
+.input {
+  display: inherit;
+  font: inherit;
+  font-size: 1.25rem;
+  outline: none;
+  background: #212429;
+  color: #ffffff;
+  padding: 16px 12px;
+  border-radius: 20px;
+  border: 1px solid #2c2f36;
+  background-color: #212429;
+  width: 100%;
+}
+
+.input:hover,
+.input:focus {
+  border: 1px solid #40444f;
+}
+
+.input:disabled {
+  border: none;
+}

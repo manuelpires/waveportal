@@ -9,13 +9,11 @@ type Props = {
 
 const Layout = ({ children, title }: Props) => (
   <>
-    <div>
-      <Head>
-        <title>{title}</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      {children}
-    </div>
+    <Head>
+      <title>{title}</title>
+      <link rel="icon" href="/favicon.ico" />
+    </Head>
+    {children}
     <div className={styles.backgroundRadialGradient} />
   </>
 );

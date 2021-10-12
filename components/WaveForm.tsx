@@ -29,7 +29,7 @@ const WaveForm = () => {
   };
 
   return (
-    <div className={styles.form}>
+    <div className={styles.container}>
       <input
         className={styles.input}
         type="text"

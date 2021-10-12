@@ -1,0 +1,40 @@
+.container {
+  margin-top: 16px;
+  padding: 20px 16px;
+  border-radius: 20px;
+  background-color: #191b1f;
+  width: initial;
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+}
+
+.container:hover {
+  background-color: rgb(22, 24, 27);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  
+  margin-bottom: 16px;
+}
+
+.from a {
+  color: white !important;
+  text-decoration: none;
+}
+
+.from a:hover {
+  text-decoration: underline;
+}
+
+.date {
+  color: #aab4be;
+  font-size: 0.75rem;
+}
+
+.message {
+  font-size: 1.25rem;
+  font-weight: 600;
+}

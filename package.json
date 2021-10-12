@@ -10,6 +10,7 @@
     "postinstall": "hardhat compile"
   },
   "dependencies": {
+    "@ethersproject/contracts": "^5.4.1",
     "@ethersproject/providers": "^5.4.5",
     "@metamask/onboarding": "^1.0.1",
     "@web3-react/core": "^6.1.9",

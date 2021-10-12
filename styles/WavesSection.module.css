@@ -1,0 +1,11 @@
+.info {
+  margin-top: 32px;
+  margin-bottom: 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+}

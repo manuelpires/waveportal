@@ -3,6 +3,7 @@
 pragma solidity ^0.8.7;
 
 contract WavePortal {
+    Wave[] public waves;
     uint256 public wavesCount;
 
     event NewWave(address indexed from, string message, uint256 timestamp);
@@ -12,8 +13,6 @@ contract WavePortal {
         string message;
         uint256 timestamp;
     }
-
-    Wave[] private waves;
 
     function wave(string memory _message) public {
         wavesCount += 1;

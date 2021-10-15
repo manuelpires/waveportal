@@ -38,6 +38,14 @@ const Web3Connect = ({ triedToEagerConnect }: Props) => {
 
   return (
     <>
+      {error && (
+        <div className={styles.error}>
+          {isUnsupportedChainIdError
+            ? "Please select the Rinkeby test network"
+            : "Error connecting"}
+        </div>
+      )}
+
       {isWeb3Available ? (
         <Button
           disabled={connecting}
@@ -58,14 +66,6 @@ const Web3Connect = ({ triedToEagerConnect }: Props) => {
         </Button>
       ) : (
         <Button onClick={startOnboarding}>Install MetaMask</Button>
-      )}
-
-      {error && (
-        <div className={styles.error}>
-          {isUnsupportedChainIdError
-            ? "Please connect to the Rinkeby network"
-            : "Error connecting"}
-        </div>
       )}
     </>
   );

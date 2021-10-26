@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import { useWeb3React, UnsupportedChainIdError } from "@web3-react/core";
+import { useWeb3React } from "@web3-react/core";
 import { UserRejectedRequestError } from "@web3-react/injected-connector";
-import { injected } from "../connectors";
-import useMetaMaskOnboarding from "../hooks/useMetaMaskOnboarding";
-import Button from "./Button";
-import styles from "../styles/Web3Connect.module.css";
+import Error from "../Error";
+import Button from "../Button";
+import useMetaMaskOnboarding from "../../hooks/useMetaMaskOnboarding";
+import { injected } from "../../connectors";
 
 type Props = {
   triedToEagerConnect: boolean;
@@ -34,17 +34,9 @@ const Web3Connect = ({ triedToEagerConnect }: Props) => {
     return null;
   }
 
-  const isUnsupportedChainIdError = error instanceof UnsupportedChainIdError;
-
   return (
     <>
-      {error && (
-        <div className={styles.error}>
-          {isUnsupportedChainIdError
-            ? "Please select the Rinkeby test network"
-            : "Error connecting"}
-        </div>
-      )}
+      <Error />
 
       {isWeb3Available ? (
         <Button

@@ -1,7 +1,8 @@
 import { useState, useEffect, useCallback } from "react";
-import WaveItem from "./WaveItem";
-import useWavePortalContract from "../hooks/useWavePortalContract";
-import styles from "../styles/WavesSection.module.css";
+import WaveList from "../WaveList";
+import WaveItem from "../WaveItem";
+import useWavePortalContract from "../../hooks/useWavePortalContract";
+import styles from "./WavesSection.module.css";
 
 const WavesSection = () => {
   const [waves, setWaves] = useState<Wave[]>([]);
@@ -62,11 +63,11 @@ const WavesSection = () => {
       <p className={styles.info}>
         {`I've received ${waves.length} waves so far 🥰`}
       </p>
-      <ol className={styles.list}>
+      <WaveList>
         {waves.map((wave, i) => (
           <WaveItem key={String(i)} {...wave} />
         ))}
-      </ol>
+      </WaveList>
     </section>
   );
 };

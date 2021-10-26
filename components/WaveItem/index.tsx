@@ -1,6 +1,6 @@
 import { useMemo } from "react";
-import useENSName from "../hooks/useENSName";
-import styles from "../styles/WaveItem.module.css";
+import useENSName from "../../hooks/useENSName";
+import styles from "./WaveItem.module.css";
 
 interface Props extends Wave {}
 

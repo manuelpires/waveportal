@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Button from "./Button";
-import useWavePortalContract from "../hooks/useWavePortalContract";
-import styles from "../styles/WaveForm.module.css";
+import Button from "../Button";
+import useWavePortalContract from "../../hooks/useWavePortalContract";
+import styles from "./WaveForm.module.css";
 
 const WaveForm = () => {
   const [message, setMessage] = useState("");

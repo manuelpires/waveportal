@@ -28,19 +28,12 @@ const WavesSection = () => {
   const subscribeToEvent = useCallback(() => {
     if (wavePortalContract) {
       const eventFilter = wavePortalContract.filters.NewWave(null);
-      wavePortalContract.on(eventFilter, (from, message, timestamp) => {
+      wavePortalContract.on(eventFilter, async (from, message, timestamp) => {
         console.log("NewWave Event:", { from, message, timestamp });
-        setWaves((prevState) => [
-          {
-            from,
-            message,
-            date: new Date(Number(timestamp) * 1000),
-          },
-          ...prevState,
-        ]);
+        await getAllWaves();
       });
     }
-  }, [wavePortalContract]);
+  }, [wavePortalContract, getAllWaves]);
 
   useEffect(() => {
     getAllWaves();

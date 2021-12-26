@@ -14,7 +14,10 @@ const Home = () => {
   const isConnected = typeof account === "string" && !!library;
 
   return (
-    <Layout title="Wave Portal | Manuel Pires">
+    <Layout
+      title="Wave Portal | Manuel Pires"
+      description="Wave at me on Ethereum Rinkeby testnet!"
+    >
       <main className={styles.page}>
         <h1 className={styles.title}>👋 Hey there!</h1>
         <p className={styles.bio}>
